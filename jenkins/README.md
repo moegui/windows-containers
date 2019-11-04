@@ -1,6 +1,6 @@
 # How to run Jenkins Windows image
 
-Start an “elevated” PowerShell (run it as administrator). Search for PowerShell, right-click, and choose Run as administrator. Move to repository cloned and following the steps:
+Start an “elevated” PowerShell (run it as administrator). Search for PowerShell, right-click, and choose Run as administrator. Go to cloned repository and following the next steps:
 
 ## 1) Build image
 
