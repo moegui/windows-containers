@@ -1,4 +1,4 @@
-FROM docker.io/openjdk:latest
+FROM openjdk:windowsservercore-1809
 
 ARG JENKINS_VERSION
 ENV JENKINS_VERSION ${JENKINS_VERSION:-2.138}
