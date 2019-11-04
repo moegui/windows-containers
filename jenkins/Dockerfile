@@ -1,7 +1,7 @@
 FROM openjdk:windowsservercore-1809
 
 ARG JENKINS_VERSION
-ENV JENKINS_VERSION ${JENKINS_VERSION:-2.138}
+ENV JENKINS_VERSION ${JENKINS_VERSION:-2.190.2}
 ARG JENKINS_URL=https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-war/${JENKINS_VERSION}/jenkins-war-${JENKINS_VERSION}.war
 ENV HOME /jenkins_home
 ARG JENKINS_HOME=\jenkins_home
