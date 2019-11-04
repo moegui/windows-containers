@@ -1,4 +1,4 @@
-FROM openjdk:windowsservercore-1809
+FROM openjdk:11.0.5-nanoserver-1809
 
 ARG JENKINS_VERSION
 ENV JENKINS_VERSION ${JENKINS_VERSION:-2.190.2}
