@@ -1,7 +1,7 @@
-FROM docker.io/openjdk:latest
+FROM openjdk:11.0.5-windowsservercore-1809
 
 ARG JENKINS_VERSION
-ENV JENKINS_VERSION ${JENKINS_VERSION:-2.138}
+ENV JENKINS_VERSION ${JENKINS_VERSION:-2.190.2}
 ARG JENKINS_URL=https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-war/${JENKINS_VERSION}/jenkins-war-${JENKINS_VERSION}.war
 ENV HOME /jenkins_home
 ARG JENKINS_HOME=\jenkins_home
@@ -16,7 +16,7 @@ RUN mkdir \jenkins_home\workspace
 RUN mkdir \jenkins_home\plugins
 
 RUN "[Net.ServicePointManager]::SecurityProtocol = 'TLS11','TLS12','ssl3'" ; \
-    Invoke-WebRequest -Uri ${env:JENKINS_URL} -OutFile /jenkins_home/jenkins.war ;
+    Invoke-WebRequest -Uri ${env:JENKINS_URL} -OutFile \jenkins_home\jenkins.war ;
 
 RUN Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
