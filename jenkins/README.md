@@ -5,15 +5,15 @@ Start an “elevated” PowerShell (run it as administrator). Search for PowerSh
 ## 1) Build image
 
 ```powershell
- docker build -t moegui/jenkins .\jenkins\.
+ docker build -t moegui/win_jenkins .\jenkins\.
 ```
 
 ## 2) Run image
 
 ```powershell
-docker run --name jenkins -e TZ=Etc/GMT-3 -p 8080:8080 moegui/jenkins
+docker run --name jenkins -e TZ=Etc/GMT-3 -p 8080:8080 moegui/win_jenkins
 ```
 
 ## 3) Connect to Jenkins
 
-+ Jenkins = http://localhost:8080 (user: jenkinks pass: jenkinks)
++ Jenkins = http://localhost:8080
